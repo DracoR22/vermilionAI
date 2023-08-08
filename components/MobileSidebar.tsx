@@ -6,7 +6,7 @@ import SideBar from './SideBar'
 import { useEffect, useState } from 'react';
 
 
-const MobileSidebar = () => {
+const MobileSidebar = ({isPro}: {isPro: boolean}) => {
 
     const [hasMounted, setHasMounted] = useState(false);
 
@@ -22,7 +22,7 @@ const MobileSidebar = () => {
           <Menu/>
         </SheetTrigger>
         <SheetContent side='left' className='p-0 bg-secondary pt-10 w-[200px]'>
-          <SideBar/>
+          <SideBar isPro={isPro}/>
         </SheetContent>
     </Sheet>
   )
